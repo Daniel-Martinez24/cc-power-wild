@@ -1415,4 +1415,13 @@ a:hover {
 	.clubes-logo {
 		max-width: 50vh;
 	}
+
+	.header .header-content {
+		padding-top: 6rem;
+	}
+
+	.header .h1-large {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
 }
