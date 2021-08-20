@@ -1407,3 +1407,12 @@ a:hover {
 	/* end of extra pages */
 }
 /* end of min-width 1200px */
+
+
+/*	max  */
+
+@media (max-width: 768px) {
+	.clubes-logo {
+		max-width: 50vh;
+	}
+}
