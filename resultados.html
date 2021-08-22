@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h1>Metodología</h1>
+                    <h1>Resultados </h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -95,7 +95,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-fluid mt-5 mb-3" width='100%' src="images/convertidor_final.png" alt="alternative">
+                    <img class="img-fluid mt-5 mb-3" width='100%' src="images/flujo_simu.png" alt="alternative">
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -107,52 +107,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h2 class="mb-4">Diseñar el aerogenerador en SolidWorks</h2>
+                    <h2 class="mb-4">Simulación del flujo de aire a través de las aspas del rotor </h2>
                     <p>Es importante diseñar y simular la superficie alar propuesta para conocer el comportamiento del flujo de aire a través de las aspas antes de realizar las pruebas experimentales. </p>
-                    <img class="img-fluid mb-5" src="images/diseño_solid.png" alt="alternative">
+                    <video src="images/Aerogenerador/flujo_aire_final.mp4" autoplay muted loop width="640" height="480"></video>
                    
-                    <h2 class="mb-4">Regular el voltaje</h2>
-                    <p>Las salidas del motor se conectan al pin 1 del regulador de voltaje, el cual corresponde al voltaje de entrada producido por el movimiento de las aspas del rotor además, el pin 3, que es el voltaje regulado a 5 V, se conecta al puerto USB. 
-Es importante medir el voltaje del aerogenerador y el voltaje regulado antes de conectar el celular.  </p>
-                    <img class="img-fluid mb-5" src="images/regulador.jpg" alt="alternative">
+                    <h2 class="mb-4">Construcción de la estructura alar</h2>
+                    <video src="images/Aerogenerador/VID_20210821_130758.mp4" autoplay muted loop width="640" height="480"></video>
                    
-                   <h2 class="mb-4">Medir los RPM del aerogenerador s</h2>
-                    <p>Se debe conectar el encoder al módulo ESP32 para medir las revoluciones por minuto (RPM), es decir, la velocidad angular del rotor. 
-El encoder se puede alimentar con el pin de 3.3 V del ESP32.
- </p>
-                    <img class="img-fluid mb-5" src="images/medidors.jpeg" alt="alternative">
-                    <p>Después se debe realizar un programa en Arduino para leer el encoder y calcular las RPM de acuerdo al número de interrupciones. 
-                    </p>
-                    
-                    <img class="img-fluid mb-5" src="images/interfaz_web.png" alt="alternative">
-                    <img class="img-fluid mb-5" src="images/rpm.jpg" alt="alternative">
-                   
-                    <h2 class="mb-4">Calcular los parámetros de rendimiento</h2>
-                    <p>Con las revoluciones por minuto (RPM) es posible calcular la velocidad del viento: </p>
-                    <img class="img-fluid mb-5" src="images/formula_1.png" alt="alternative">
-                    <p>En consecuencia, es posible obtener la potencia del aire de entrada:  </p>
-                    <img class="img-fluid mb-5" src="images/formula_3.png" alt="alternative">
-                    <p>Donde p es la densidad de aire (1.23 kg/m3), A es el área de la sección transversal y v es la velocidad del viento.</p>
+                   <h2 class="mb-4">Montaje experimental para regular el voltaje a 5V y cargar un celular</h2>
+                    <video src="images/Aerogenerador/ensamble_completo.mp4" autoplay muted loop width="640" height="480"></video>
+                   <p>*El voltaje máximo del aerogenerador fueron 8V </p>
 
-                    <p>Dividiendo la potencia eléctrica y la potencia del aire de entrada, es posible estimar el coeficiente de potencia (Cp) del aerogenerador, que para nuestro prototipo corresponde un valor de 0.4</p>
+                   <h2 class="mb-4">CProbar el circuito sobre un vehículo y cargar el celular </h2>
+                    <img class="img-fluid mb-5" src="images/carro_1.png" alt="alternative">
+                    <img class="img-fluid mb-5" src="images/carro_2.png" alt="alternative">
 
-                    <p>Finalmente, para conocer la potencia captada por el rotor, se debe multiplicar la potencia del aire de entrada por el Cp. </p>
-                   <p>Con estos valores es posible estimar la eficiencia del aerogenerador, que para nuestro prototipo es del 40 %.
-                    </p>
-                    
-                    <div class="text-box mb-5">
-                        <h3>Nota:</h3>
-                        <p> Según el teorema de Betz, la energía máxima que podrá captarse del viento para que el rendimiento sea máximo es del 59%</p>
-                    </div> <!-- end of text-box -->
-                     <p>Estas fórmulas se agregan al código del encoder, de la siguiente forma: </p>
-                    <img class="img-fluid mb-5" src="images/prog_formulas.png" alt="alternative">
-                    
-                   <h2 class="mb-4"> Crear interfaz web para acceder a los parámetros desde el celular</h2>
-                    <p>El NodeMCU ESP32 es un microcontrolador con módulos integrados de Wifi y Bluetooth. 
-                    El transmisor WiFi y la antena incorporada en el microcontrolador permite la conexión a Internet. Gracias a esto, es posible crear un servidor que aloja una interfaz web para controlar el microcontrolador ESP32 de forma remota, y de esta forma, observar los parámetros de rendimiento en tiempo real.
-                    Para ello es necesario usar la librería Wifi.h, inicializar el servidor, ingresar el ssid y la contraseña de nuestra red además de diseñar la página web en HTML. 
-                    </p>
-                 
+                    <h2 class="mb-4">Página web para conocer los parámetros de rendimiento en tiempo real, ya que los parámetros se actualizan cada segundo. </h2>
+                    <video src="images/Aerogenerador/VID_20210821_130631.mp4" autoplay muted loop width="640" height="480"></video>
+                    <img class="img-fluid mb-5" src="images/web.jpeg" alt="alternative">
+                   
+                    <br/>
                     <a class="btn-solid-reg mb-5" href="index.html">Home</a>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
